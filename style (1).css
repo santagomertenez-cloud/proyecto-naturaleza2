@@ -582,3 +582,52 @@ table.stock tbody td{border-bottom:1px solid rgba(122,155,110,.1)}
   table.stock{font-size:.82rem}
   table.stock th,table.stock td{padding:10px 8px}
 }
+.floating-btn {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  z-index: 100;
+  
+  /* Estilo visual coherente con el diseño */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(122, 155, 110, 0.3);
+  border-radius: 999px;
+  box-shadow: 0 8px 30px rgba(46, 63, 42, 0.15);
+  
+  color: #2e3f2a;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.floating-btn:hover {
+  transform: translateY(-4px);
+  background: #7a9b6e;
+  color: #ffffff;
+  box-shadow: 0 12px 40px rgba(122, 155, 110, 0.35);
+}
+
+.floating-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Ajuste para dispositivos móviles para que no tape el menú inferior */
+@media (max-width: 560px) {
+  .floating-btn {
+    bottom: 5.5rem; /* Se eleva para no chocar con la .nav o .bottom-nav */
+    right: 1rem;
+    padding: 10px;
+  }
+  .floating-btn span {
+    display: none; /* Oculta el texto en móviles pequeños, deja solo el icono */
+  }
+}
