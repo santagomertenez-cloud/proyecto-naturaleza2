@@ -52,24 +52,27 @@
 </main>
 
 <!--#NAV-->
-<nav class="nav" aria-label="Navegación principal">
-  <a href="index.html" aria-label="Calendario">
-    <span class="tip">Calendario</span>
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c-5-3-7-7-7-11a7 7 0 0114 0c0 4-2 8-7 11z"/><path d="M12 21V8"/></svg>
-  </a>
-  <a href="reservas.html" aria-label="Reservas">
-    <span class="tip">Reservas</span>
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 14c4-9 14-9 14 0 0 4-4 7-7 7s-7-3-7-7z"/><path d="M12 21V10"/></svg>
-  </a>
-  <a href="historial.html" aria-label="Historial">
-    <span class="tip">Historial</span>
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12c0-5 4-8 8-8s8 3 8 8-4 8-8 8c-3 0-5-2-6-3"/><path d="M12 8v4l3 2"/></svg>
-  </a>
-  <a href="galeria.html" aria-label="Galería">
-    <span class="tip">Galería</span>
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12c5-8 13-8 18 0-5 8-13 8-18 0z"/><circle cx="12" cy="12" r="2.5"/></svg>
-  </a>
-</nav>
+<div class="admin-menu-wrapper">
+  <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+  
+  <!-- Lista de opciones (en orden del primero al último) -->
+  <div class="admin-options">
+    <a href="dashboard.html" class="option-item"><i>📊</i> Dashboard de Métricas</a>
+    <a href="stock.html" class="option-item"><i>📦</i> Control de Stock</a>
+    <a href="detalle.html" class="option-item"><i>📄</i> Ficha de Detalle</a>
+    <a href="config.html" class="option-item"><i>⚙️</i> Configuración de Sistema</a>
+    <a href="calendario.html" class="option-item"><i>📅</i> Calendario de Eventos</a>
+    <a href="formulario.html" class="option-item"><i>📝</i> Formulario</a>
+    <a href="historial.html" class="option-item"><i>🕒</i> Historial</a>
+    <a href="galeria.html" class="option-item"><i>🖼️</i> Galería</a>
+  </div>
+
+  <!-- Botón principal que abre el menú -->
+  <label for="menu-toggle" class="main-fob">
+    <span class="icon-open">+</span>
+    <span class="icon-close">×</span>
+  </label>
+</div>
 <script src="app.js"></script>
   <span>Admin</span>
 </a>
