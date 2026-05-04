@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Vivero Salvia · Reservas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<main class="wrap section">
+  <header class="hero">
+    <span class="eyebrow">Reservas · Talleres</span>
+    <h1>Asegura tu lugar<br/>en el invernadero</h1>
+    <p class="lead">Completa el formulario y nuestro equipo confirmará tu reserva en menos de 24 horas.</p>
+  </header>
+
+  <form id="reservaForm" class="form glass" novalidate>
+    <div class="field">
+      <label for="nombre">Nombre</label>
+      <input id="nombre" type="text" required placeholder="Camila Riera"/>
+    </div>
+    <div class="field">
+      <label for="email">Correo</label>
+      <input id="email" type="email" required placeholder="hola@correo.com"/>
+    </div>
+    <div class="field">
+      <label for="taller">Taller</label>
+      <select id="taller" required>
+        <option value="">Elige uno…</option>
+        <option>Bonsái urbano · 07 May</option>
+        <option>Kokedama · 14 May</option>
+        <option>Compostaje en casa · 21 May</option>
+        <option>Suculentas y luz · 28 May</option>
+        <option>Hierbas aromáticas · 04 Jun</option>
+        <option>Poda consciente · 11 Jun</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="personas">Personas</label>
+      <input id="personas" type="number" min="1" max="6" value="1"/>
+    </div>
+    <div class="field full">
+      <label for="notas">Notas</label>
+      <textarea id="notas" placeholder="¿Alergias, nivel de experiencia, alguna planta favorita?"></textarea>
+    </div>
+    <div class="full">
+      <button class="btn coral" type="submit">Reservar lugar</button>
+      <p id="toast" class="toast">Gracias · te escribiremos al correo para confirmar.</p>
+    </div>
+  </form>
+</main>
+
+<nav class="nav" aria-label="Navegación principal">
+  <a href="index.html" aria-label="Calendario"><span class="tip">Calendario</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c-5-3-7-7-7-11a7 7 0 0114 0c0 4-2 8-7 11z"/><path d="M12 21V8"/></svg></a>
+  <a href="reservas.html" aria-label="Reservas"><span class="tip">Reservas</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 14c4-9 14-9 14 0 0 4-4 7-7 7s-7-3-7-7z"/><path d="M12 21V10"/></svg></a>
+  <a href="historial.html" aria-label="Historial"><span class="tip">Historial</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12c0-5 4-8 8-8s8 3 8 8-4 8-8 8c-3 0-5-2-6-3"/><path d="M12 8v4l3 2"/></svg></a>
+  <a href="galeria.html" aria-label="Galería"><span class="tip">Galería</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12c5-8 13-8 18 0-5 8-13 8-18 0z"/><circle cx="12" cy="12" r="2.5"/></svg></a>
+</nav>
+<script src="app.js"></script>
+</body>
+</html>

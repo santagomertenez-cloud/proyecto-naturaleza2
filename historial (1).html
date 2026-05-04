@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Vivero Salvia · Historial</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<main class="wrap section">
+  <header class="hero">
+    <span class="eyebrow">Bitácora · Stock y ventas</span>
+    <h1>Historial de movimientos</h1>
+    <p class="lead">Cada planta que entra y sale del vivero queda anotada. Una crónica honesta de la temporada.</p>
+  </header>
+
+  <section class="glass" style="margin-bottom:1.5rem;padding:1.4rem 1.6rem;">
+    <h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;margin:0 0 1rem;font-size:1.35rem;">Registrar movimiento</h2>
+    <form id="movForm" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:.8rem;align-items:end;font-family:'Inter',sans-serif;font-weight:300;">
+      <label style="display:flex;flex-direction:column;gap:.3rem;font-size:.78rem;color:#5a5a52;">Tipo
+        <select name="tipo" required style="padding:.55rem .7rem;border:1px solid rgba(0,0,0,.12);border-radius:8px;background:#fff;font:inherit;">
+          <option value="in">Ingreso</option>
+          <option value="out">Venta</option>
+          <option value="">Interno</option>
+        </select>
+      </label>
+      <label style="display:flex;flex-direction:column;gap:.3rem;font-size:.78rem;color:#5a5a52;">Planta / artículo
+        <input name="nombre" required placeholder="Lavanda angustifolia" style="padding:.55rem .7rem;border:1px solid rgba(0,0,0,.12);border-radius:8px;background:#fff;font:inherit;" />
+      </label>
+      <label style="display:flex;flex-direction:column;gap:.3rem;font-size:.78rem;color:#5a5a52;">Cantidad
+        <input name="cantidad" type="number" min="1" required value="1" style="padding:.55rem .7rem;border:1px solid rgba(0,0,0,.12);border-radius:8px;background:#fff;font:inherit;" />
+      </label>
+      <label style="display:flex;flex-direction:column;gap:.3rem;font-size:.78rem;color:#5a5a52;">Detalle
+        <input name="detalle" placeholder="proveedor / cliente" style="padding:.55rem .7rem;border:1px solid rgba(0,0,0,.12);border-radius:8px;background:#fff;font:inherit;" />
+      </label>
+      <button type="submit" style="padding:.65rem 1.1rem;border:none;border-radius:8px;background:#3d4a3a;color:#f4efe6;font:inherit;cursor:pointer;letter-spacing:.02em;">Añadir</button>
+    </form>
+  </section>
+
+  <section class="log glass" id="logList">
+    <div class="log-item">
+      <time>03 May · 09:14</time>
+      <div class="desc"><strong>Ingreso · Lavanda angustifolia</strong><span>+24 unidades · proveedor La Quebrada</span></div>
+      <span class="tag in">Ingreso</span>
+    </div>
+    <div class="log-item">
+      <time>03 May · 11:42</time>
+      <div class="desc"><strong>Venta · Monstera deliciosa</strong><span>2 unidades · cliente mostrador</span></div>
+      <span class="tag out">Venta</span>
+    </div>
+    <div class="log-item">
+      <time>02 May · 17:20</time>
+      <div class="desc"><strong>Traspaso · Helecho boston</strong><span>5 unidades a invernadero norte</span></div>
+      <span class="tag">Interno</span>
+    </div>
+    <div class="log-item">
+      <time>02 May · 10:05</time>
+      <div class="desc"><strong>Venta · Pothos jade</strong><span>4 unidades · pedido online #1284</span></div>
+      <span class="tag out">Venta</span>
+    </div>
+    <div class="log-item">
+      <time>01 May · 16:48</time>
+      <div class="desc"><strong>Ingreso · Olivo enano</strong><span>+8 unidades · vivero hermano</span></div>
+      <span class="tag in">Ingreso</span>
+    </div>
+    <div class="log-item">
+      <time>30 Abr · 12:30</time>
+      <div class="desc"><strong>Venta · Albahaca genovesa</strong><span>12 macetas · feria del barrio</span></div>
+      <span class="tag out">Venta</span>
+    </div>
+    <div class="log-item">
+      <time>29 Abr · 08:50</time>
+      <div class="desc"><strong>Ingreso · Sustrato orgánico</strong><span>+40 sacos de 5L</span></div>
+      <span class="tag in">Ingreso</span>
+    </div>
+  </section>
+</main>
+
+<nav class="nav" aria-label="Navegación principal">
+  <a href="calendario.html" aria-label="Calendario"><span class="tip">Calendario</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c-5-3-7-7-7-11a7 7 0 0114 0c0 4-2 8-7 11z"/><path d="M12 21V8"/></svg></a>
+  <a href="reservas.html" aria-label="Reservas"><span class="tip">Reservas</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 14c4-9 14-9 14 0 0 4-4 7-7 7s-7-3-7-7z"/><path d="M12 21V10"/></svg></a>
+  <a href="historial.html" aria-label="Historial"><span class="tip">Historial</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12c0-5 4-8 8-8s8 3 8 8-4 8-8 8c-3 0-5-2-6-3"/><path d="M12 8v4l3 2"/></svg></a>
+  <a href="galeria.html" aria-label="Galería"><span class="tip">Galería</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12c5-8 13-8 18 0-5 8-13 8-18 0z"/><circle cx="12" cy="12" r="2.5"/></svg></a>
+</nav>
+<script src="app.js"></script>
+<script>
+(function(){
+  const KEY='vivero_movs_v1';
+  const list=document.getElementById('logList');
+  const form=document.getElementById('movForm');
+  const meses=['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+  function fmt(d){const dt=new Date(d);const dd=String(dt.getDate()).padStart(2,'0');const mm=meses[dt.getMonth()];const hh=String(dt.getHours()).padStart(2,'0');const mi=String(dt.getMinutes()).padStart(2,'0');return dd+' '+mm+' · '+hh+':'+mi;}
+  function load(){return JSON.parse(localStorage.getItem(KEY)||'[]');}
+  function save(arr){localStorage.setItem(KEY,JSON.stringify(arr));}
+  function render(){
+    const movs=load().slice().reverse();
+    // Remove existing dynamic items
+    list.querySelectorAll('[data-dyn]').forEach(n=>n.remove());
+    movs.forEach(m=>{
+      const item=document.createElement('div');
+      item.className='log-item';
+      item.dataset.dyn='1';
+      const verbo=m.tipo==='in'?'Ingreso':m.tipo==='out'?'Venta':'Traspaso';
+      const signo=m.tipo==='in'?'+':m.tipo==='out'?'−':'';
+      const tagClass=m.tipo==='in'?'tag in':m.tipo==='out'?'tag out':'tag';
+      const tagLabel=m.tipo==='in'?'Ingreso':m.tipo==='out'?'Venta':'Interno';
+      item.innerHTML='<time>'+fmt(m.fecha)+'</time><div class="desc"><strong>'+verbo+' · '+m.nombre+'</strong><span>'+signo+m.cantidad+' unidades'+(m.detalle?' · '+m.detalle:'')+'</span></div><span class="'+tagClass+'">'+tagLabel+'</span>';
+      list.insertBefore(item,list.firstChild);
+    });
+  }
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    const fd=new FormData(form);
+    const arr=load();
+    arr.push({tipo:fd.get('tipo'),nombre:fd.get('nombre'),cantidad:Number(fd.get('cantidad')),detalle:fd.get('detalle'),fecha:Date.now()});
+    save(arr);
+    form.reset();
+    form.querySelector('[name=cantidad]').value=1;
+    render();
+  });
+  render();
+})();
+</script>
+</body>
+</html>
