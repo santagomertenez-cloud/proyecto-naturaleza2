@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Stock · Vivero Admin</title>
+<meta name="description" content="Control de inventario de plantas, semillas y accesorios del vivero." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main class="container">
+  <header class="app-header">
+    <div class="brand">
+      <div class="brand-mark">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c0-7 4-12 10-12-1 7-5 12-10 12Z"/><path d="M12 22C12 15 8 10 2 10c1 7 5 12 10 12Z"/><path d="M12 22V10"/></svg>
+      </div>
+      <div>
+        <div class="brand-name">Verdalia</div>
+        <div class="brand-sub">Vivero Admin Suite</div>
+      </div>
+    </div>
+    <div class="header-meta">
+      <span class="dot"></span>
+      <span>Inventario sincronizado · Hace 2 min</span>
+    </div>
+  </header>
+
+  <section class="page-intro" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px">
+    <div>
+      <h1>Inventario</h1>
+      <p>Controla el stock disponible, los niveles mínimos y la rotación de cada especie.</p>
+    </div>
+    <button class="btn primary">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+      Añadir planta
+    </button>
+  </section>
+
+  <section class="panel">
+    <div class="toolbar">
+      <div class="search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7a9b6e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input type="search" placeholder="Buscar especie, código o categoría…" />
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button class="btn ghost"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M6 12h12M10 18h4"/></svg> Filtrar</button>
+        <button class="btn ghost"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14"/></svg> Exportar</button>
+      </div>
+    </div>
+
+    <div style="overflow-x:auto">
+    <table class="stock">
+      <thead>
+        <tr>
+          <th>Especie</th>
+          <th>Categoría</th>
+          <th>Stock</th>
+          <th>Precio</th>
+          <th>Ubicación</th>
+          <th>Estado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="row-name"><span class="thumb"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22c0-7 4-12 10-12-1 7-5 12-10 12Z"/><path d="M12 22V10"/></svg></span>Monstera Deliciosa</span></td>
+          <td>Interior</td>
+          <td>48</td>
+          <td>$ 22.00</td>
+          <td>Invernadero A · F2</td>
+          <td><span class="tag">Disponible</span></td>
+        </tr>
+        <tr>
+          <td><span class="row-name"><span class="thumb"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22c0-7 4-12 10-12-1 7-5 12-10 12Z"/><path d="M12 22V10"/></svg></span>Lavanda Angustifolia</span></td>
+          <td>Aromática</td>
+          <td>3</td>
+          <td>$ 8.50</td>
+          <td>Exterior · E1</td>
+          <td><span class="tag coral">Stock bajo</span></td>
+        </tr>
+        <tr>
+          <td><span class="row-name"><span class="thumb"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22c0-7 4-12 10-12-1 7-5 12-10 12Z"/><path d="M12 22V10"/></svg></span>Echeveria Elegans</span></td>
+          <td>Suculenta</td>
+          <td>126</td>
+          <td>$ 5.00</td>
+          <td>Mesón S2</td>
+          <td><span class="tag">Disponible</span></td>
+        </tr>
+        <tr>
+          <td><span class="row-name"><span class="thumb"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22c0-7 4-12 10-12-1 7-5 12-10 12Z"/><path d="M12 22V10"/></svg></span>Ficus Lyrata</span></td>
+          <td>Interior</td>
+          <td>17</td>
+          <td>$ 38.00</td>
+          <td>Invernadero A · F4</td>
+          <td><span class="tag cream">Reposición</span></td>
+        </tr>
+        <tr>
+          <td><span class="row-name"><span class="thumb"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22c0-7 4-12 10-12-1 7-5 12-10 12Z"/><path d="M12 22V10"/></svg></span>Romero Officinalis</span></td>
+          <td>Aromática</td>
+          <td>62</td>
+          <td>$ 6.20</td>
+          <td>Exterior · E2</td>
+          <td><span class="tag">Disponible</span></td>
+        </tr>
+        <tr>
+          <td><span class="row-name"><span class="thumb"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22c0-7 4-12 10-12-1 7-5 12-10 12Z"/><path d="M12 22V10"/></svg></span>Pothos Aureus</span></td>
+          <td>Interior</td>
+          <td>89</td>
+          <td>$ 11.00</td>
+          <td>Invernadero B · F1</td>
+          <td><span class="tag">Disponible</span></td>
+        </tr>
+        <tr>
+          <td><span class="row-name"><span class="thumb"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22c0-7 4-12 10-12-1 7-5 12-10 12Z"/><path d="M12 22V10"/></svg></span>Helecho Boston</span></td>
+          <td>Interior</td>
+          <td>0</td>
+          <td>$ 14.00</td>
+          <td>—</td>
+          <td><span class="tag coral">Agotado</span></td>
+        </tr>
+        <tr>
+          <td><span class="row-name"><span class="thumb"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22c0-7 4-12 10-12-1 7-5 12-10 12Z"/><path d="M12 22V10"/></svg></span>Olivo Enano</span></td>
+          <td>Exterior</td>
+          <td>22</td>
+          <td>$ 45.00</td>
+          <td>Patio P1</td>
+          <td><span class="tag">Disponible</span></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </section>
+</main>
+
+<nav class="bottom-nav" aria-label="Navegación principal">
+  <a href="dashboard.html" aria-label="Dashboard">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c4 4 6 8 6 11a6 6 0 0 1-12 0c0-3 2-7 6-11Z"/><path d="M12 14v7"/></svg>
+    <span>Inicio</span>
+  </a>
+  <a href="stock.html" class="active" aria-label="Stock">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21c0-5 3-9 9-9-1 5-4 9-9 9Z"/><path d="M19 11c0-4-3-7-7-7 1 4 4 7 7 7Z"/><path d="M12 21V12"/></svg>
+    <span>Stock</span>
+  </a>
+  <a href="perfil.html" aria-label="Perfil planta">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5-2 8-7 8-12 0-3-2-5-4-5s-3 1-4 3c-1-2-2-3-4-3S4 7 4 10c0 5 3 10 8 12Z"/></svg>
+    <span>Plantas</span>
+  </a>
+  <a href="config.html" aria-label="Configuración">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3 13 6h-2L10 3 7 4l1 3-2 1-3-1-1 3 3 1v2l-3 1 1 3 3-1 2 1-1 3 3 1 1-3h2l1 3 3-1-1-3 2-1 3 1 1-3-3-1v-2l3-1-1-3-3 1-2-1 1-3-3-1Z"/><circle cx="12" cy="12" r="3"/></svg>
+    <span>Ajustes</span>
+  </a>
+</nav>
+</body>
+</html>
