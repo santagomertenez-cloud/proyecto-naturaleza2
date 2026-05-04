@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Configuración · Vivero Admin</title>
+<meta name="description" content="Ajustes generales del sistema, notificaciones, integraciones y preferencias del vivero." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main class="container">
+  <header class="app-header">
+    <div class="brand">
+      <div class="brand-mark">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c0-7 4-12 10-12-1 7-5 12-10 12Z"/><path d="M12 22C12 15 8 10 2 10c1 7 5 12 10 12Z"/><path d="M12 22V10"/></svg>
+      </div>
+      <div>
+        <div class="brand-name">Verdalia</div>
+        <div class="brand-sub">Vivero Admin Suite</div>
+      </div>
+    </div>
+    <div class="header-meta">
+      <span class="dot"></span>
+      <span>Versión 2.4 · Actualizado hoy</span>
+    </div>
+  </header>
+
+  <section class="page-intro">
+    <h1>Ajustes</h1>
+    <p>Personaliza la experiencia del sistema, las alertas botánicas y las integraciones con tu vivero.</p>
+  </section>
+
+  <section class="settings">
+    <aside class="settings-nav panel" style="padding:14px">
+      <a href="#general" class="active">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19 12a7 7 0 0 0-.2-1.7l2-1.5-2-3.4-2.4.9a7 7 0 0 0-3-1.7L13 2h-2l-.4 2.6a7 7 0 0 0-3 1.7l-2.4-.9-2 3.4 2 1.5A7 7 0 0 0 5 12c0 .6.1 1.1.2 1.7l-2 1.5 2 3.4 2.4-.9a7 7 0 0 0 3 1.7L11 22h2l.4-2.6a7 7 0 0 0 3-1.7l2.4.9 2-3.4-2-1.5c.1-.6.2-1.1.2-1.7Z"/></svg>
+        General
+      </a>
+      <a href="#notif">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 8 3 8H3s3-1 3-8Z"/><path d="M10 21a2 2 0 0 0 4 0"/></svg>
+        Notificaciones
+      </a>
+      <a href="#riego">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c4 6 7 10 7 13a7 7 0 0 1-14 0c0-3 3-7 7-13Z"/></svg>
+        Riego automático
+      </a>
+      <a href="#equipo">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5M15 20c0-2 2-4 4-4s2 1 2 1"/></svg>
+        Equipo
+      </a>
+      <a href="#integraciones">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+        Integraciones
+      </a>
+    </aside>
+
+    <div style="display:flex;flex-direction:column;gap:18px">
+      <div class="panel" id="general">
+        <h2>General</h2>
+        <div class="setting-row">
+          <div class="info"><h4>Nombre del vivero</h4><p>Aparecerá en facturas y etiquetas.</p></div>
+          <input class="input" type="text" value="Vivero Verdalia" />
+        </div>
+        <div class="setting-row">
+          <div class="info"><h4>Idioma</h4><p>Idioma principal de la interfaz.</p></div>
+          <select class="input">
+            <option>Español (LATAM)</option><option>English</option><option>Português</option>
+          </select>
+        </div>
+        <div class="setting-row">
+          <div class="info"><h4>Zona horaria</h4><p>Se usa para registros y alertas de riego.</p></div>
+          <select class="input">
+            <option>GMT-3 · Buenos Aires</option><option>GMT-5 · Bogotá</option><option>GMT+1 · Madrid</option>
+          </select>
+        </div>
+        <div class="setting-row">
+          <div class="info"><h4>Modo orgánico</h4><p>Resalta proveedores certificados y productos sin químicos.</p></div>
+          <label class="switch"><input type="checkbox" checked /><span class="slider"></span></label>
+        </div>
+      </div>
+
+      <div class="panel" id="notif">
+        <h2>Notificaciones</h2>
+        <div class="setting-row">
+          <div class="info"><h4>Alertas de stock bajo</h4><p>Avisar cuando una especie tenga menos de 5 unidades.</p></div>
+          <label class="switch"><input type="checkbox" checked /><span class="slider"></span></label>
+        </div>
+        <div class="setting-row">
+          <div class="info"><h4>Recordatorios de riego</h4><p>Notificación diaria por la mañana.</p></div>
+          <label class="switch"><input type="checkbox" checked /><span class="slider"></span></label>
+        </div>
+        <div class="setting-row">
+          <div class="info"><h4>Reportes semanales</h4><p>Resumen de ventas e inventario cada lunes.</p></div>
+          <label class="switch"><input type="checkbox" /><span class="slider"></span></label>
+        </div>
+      </div>
+
+      <div class="panel" id="integraciones">
+        <h2>Integraciones</h2>
+        <div class="setting-row">
+          <div class="info"><h4>Sensores de humedad IoT</h4><p>Conectado a 12 macetas inteligentes.</p></div>
+          <span class="tag">Activo</span>
+        </div>
+        <div class="setting-row">
+          <div class="info"><h4>Tienda online</h4><p>Sincroniza catálogo y precios automáticamente.</p></div>
+          <button class="btn" data-action="configure">Configurar</button>
+        </div>
+        <div class="setting-row">
+          <div class="info"><h4>Facturación electrónica</h4><p>Emisión y envío de comprobantes fiscales.</p></div>
+          <span class="tag cream">Pendiente</span>
+        </div>
+        <div style="margin-top:18px;display:flex;justify-content:flex-end;gap:10px">
+          <button class="btn ghost" data-action="cancel-settings">Cancelar</button>
+          <button class="btn primary" data-action="save-settings">Guardar cambios</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<nav class="bottom-nav" aria-label="Navegación principal">
+  <a href="dashboard.html" aria-label="Dashboard">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c4 4 6 8 6 11a6 6 0 0 1-12 0c0-3 2-7 6-11Z"/><path d="M12 14v7"/></svg>
+    <span>Inicio</span>
+  </a>
+  <a href="stock.html" aria-label="Stock">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21c0-5 3-9 9-9-1 5-4 9-9 9Z"/><path d="M19 11c0-4-3-7-7-7 1 4 4 7 7 7Z"/><path d="M12 21V12"/></svg>
+    <span>Stock</span>
+  </a>
+  <a href="perfil.html" aria-label="Perfil planta">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5-2 8-7 8-12 0-3-2-5-4-5s-3 1-4 3c-1-2-2-3-4-3S4 7 4 10c0 5 3 10 8 12Z"/></svg>
+    <span>Plantas</span>
+  </a>
+  <a href="config.html" class="active" aria-label="Configuración">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3 13 6h-2L10 3 7 4l1 3-2 1-3-1-1 3 3 1v2l-3 1 1 3 3-1 2 1-1 3 3 1 1-3h2l1 3 3-1-1-3 2-1 3 1 1-3-3-1v-2l3-1-1-3-3 1-2-1 1-3-3-1Z"/><circle cx="12" cy="12" r="3"/></svg>
+    <span>Ajustes</span>
+  </a>
+</nav>
+<script src="app.js"></script>
+</body>
+</html>
