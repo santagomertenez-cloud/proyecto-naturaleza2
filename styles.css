@@ -324,3 +324,87 @@ table.stock tbody td{border-bottom:1px solid rgba(122,155,110,.1)}
   table.stock th,table.stock td{padding:10px 8px}
 }
 
+/* Contenedor en la esquina inferior derecha */
+.admin-menu-wrapper {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+/* Ocultar el checkbox que controla el estado */
+.menu-checkbox { display: none; }
+
+/* Botón Circular Principal */
+.main-fob {
+  width: 56px;
+  height: 56px;
+  background: #7a9b6e; /* Color principal Salvia */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(122, 155, 110, 0.4);
+  transition: transform 0.3s ease;
+}
+
+/* Lista de Opciones (Oculta por defecto) */
+.admin-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Cada ítem del menú */
+.option-item {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  padding: 10px 18px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #2e3f2a;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border: 1px solid rgba(122, 155, 110, 0.2);
+  transition: all 0.2s ease;
+}
+
+.option-item:hover {
+  background: #7a9b6e;
+  color: white;
+  transform: translateX(-5px);
+}
+
+/* Lógica de apertura al hacer clic */
+.menu-checkbox:checked ~ .admin-options {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.menu-checkbox:checked ~ .main-fob {
+  background: #2e3f2a;
+  transform: rotate(135deg);
+}
+
+/* Ajuste para móviles para no tapar la navegación */
+@media (max-width: 600px) {
+  .admin-menu-wrapper {
+    bottom: 85px; /* Sube para dejar espacio a la .bottom-nav */
+    right: 15px;
+  }
+}
