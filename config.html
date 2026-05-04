@@ -106,15 +106,15 @@
         </div>
         <div class="setting-row">
           <div class="info"><h4>Tienda online</h4><p>Sincroniza catálogo y precios automáticamente.</p></div>
-          <button class="btn">Configurar</button>
+          <button class="btn" data-action="configure">Configurar</button>
         </div>
         <div class="setting-row">
           <div class="info"><h4>Facturación electrónica</h4><p>Emisión y envío de comprobantes fiscales.</p></div>
           <span class="tag cream">Pendiente</span>
         </div>
         <div style="margin-top:18px;display:flex;justify-content:flex-end;gap:10px">
-          <button class="btn ghost">Cancelar</button>
-          <button class="btn primary">Guardar cambios</button>
+          <button class="btn ghost" data-action="cancel-settings">Cancelar</button>
+          <button class="btn primary" data-action="save-settings">Guardar cambios</button>
         </div>
       </div>
     </div>
@@ -139,5 +139,6 @@
     <span>Ajustes</span>
   </a>
 </nav>
+<script src="app.js"></script>
 </body>
 </html>
