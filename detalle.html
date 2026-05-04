@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Vivero Salvia · Calendario de Eventos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main class="wrap section">
+  <header class="hero">
+    <span class="eyebrow">Vivero Salvia · Agenda</span>
+    <h1>Calendario de eventos<br/>y talleres de temporada</h1>
+    <p class="lead">Encuentros pequeños alrededor de la jardinería lenta. Plazas limitadas, café de filtro y tierra bajo las uñas.</p>
+  </header>
+
+  <section class="cal-grid">
+    <article class="event">
+      <div class="date"><span class="d">07</span><span class="m">May</span></div>
+      <h3>Taller de bonsái urbano</h3>
+      <small>10:00 · Invernadero norte</small>
+    </article>
+    <article class="event">
+      <div class="date"><span class="d">14</span><span class="m">May</span></div>
+      <h3>Iniciación a la kokedama</h3>
+      <small>17:30 · Patio interior</small>
+    </article>
+    <article class="event">
+      <div class="date"><span class="d">21</span><span class="m">May</span></div>
+      <h3>Compostaje en casa</h3>
+      <small>11:00 · Aula verde</small>
+    </article>
+    <article class="event">
+      <div class="date"><span class="d">28</span><span class="m">May</span></div>
+      <h3>Suculentas y luz</h3>
+      <small>18:00 · Sala de cultivo</small>
+    </article>
+    <article class="event">
+      <div class="date"><span class="d">04</span><span class="m">Jun</span></div>
+      <h3>Hierbas aromáticas</h3>
+      <small>10:30 · Huerto demostrativo</small>
+    </article>
+    <article class="event">
+      <div class="date"><span class="d">11</span><span class="m">Jun</span></div>
+      <h3>Poda consciente</h3>
+      <small>16:00 · Jardín principal</small>
+    </article>
+  </section>
+</main>
+
+<!--#NAV-->
+<div class="admin-menu-wrapper">
+  <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+  
+  <!-- Lista de opciones (en orden del primero al último) -->
+  <div class="admin-options">
+    <a href="dashboard.html" class="option-item"><i>📊</i> Dashboard de Métricas</a>
+    <a href="stock.html" class="option-item"><i>📦</i> Control de Stock</a>
+    <a href="detalle.html" class="option-item"><i>📄</i> Ficha de Detalle</a>
+    <a href="config.html" class="option-item"><i>⚙️</i> Configuración de Sistema</a>
+    <a href="calendario.html" class="option-item"><i>📅</i> Calendario de Eventos</a>
+    <a href="formulario.html" class="option-item"><i>📝</i> Formulario</a>
+    <a href="historial.html" class="option-item"><i>🕒</i> Historial</a>
+    <a href="galeria.html" class="option-item"><i>🖼️</i> Galería</a>
+  </div>
+
+  <!-- Botón principal que abre el menú -->
+  <label for="menu-toggle" class="main-fob">
+    <span class="icon-open">+</span>
+    <span class="icon-close">×</span>
+  </label>
+</div>
+<script src="app.js"></script>
+  <span>Admin</span>
+</a>
+<a href="dashboard.html" class="floating-btn" aria-label="Ir al panel de administración">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 22c0-7 4-12 10-12-1 7-5 12-10 12Z"/><path d="M12 22C12 15 8 10 2 10c1 7 5 12 10 12Z"/><path d="M12 22V10"/>
+  </svg>
+  <span>Admin</span>
+</a>
+</body>
+</html>
